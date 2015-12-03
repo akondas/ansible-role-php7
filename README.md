@@ -34,7 +34,7 @@ None.
 
     - hosts: webservers
       roles:
-        - { role: php7 }
+        - { role: itcraftsmanpl.php7 }
 
 ## License
 
