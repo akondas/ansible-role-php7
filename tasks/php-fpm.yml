@@ -12,7 +12,7 @@
 - name: Ensure timezone is set in fpm php.ini
   lineinfile: dest=/etc/php/7.0/fpm/php.ini
               regexp='date.timezone ='
-              line='date.timezone = {{ server.timezone }}'
+              line='date.timezone = {{ php_timezone }}'
 
 - name: Enabling opcache
   lineinfile: dest=/etc/php/7.0/fpm/php.ini
