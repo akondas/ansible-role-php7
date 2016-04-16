@@ -4,7 +4,7 @@
               regexp='date.timezone ='
               line='date.timezone = {{ php_timezone }}'
 
-- name: Enabling opcache cli
+- name: disabling opcache cli
   lineinfile: dest=/etc/php/7.0/cli/php.ini
-              regexp=';?opcache.enable_cli='
-              line='opcache.enable_cli=1'
+              regexp='opcache.enable_cli='
+              line='opcache.enable_cli=0'
