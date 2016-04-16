@@ -15,4 +15,4 @@ galaxy_info:
     - php
     - php7
     - web
-  dependencies: []
+dependencies: []
