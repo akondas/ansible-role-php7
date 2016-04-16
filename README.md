@@ -24,6 +24,7 @@ Available variables are listed below, along with default values (see `defaults/m
       - php7.0-gd
       - php7.0-mbstring
       - php7.0-mcrypt
+    php_timezone: Europe/Warsaw
     php_upload_max_filesize: "20M"
     php_post_max_size: "20M"
     php_memory_limit: "1024M"
