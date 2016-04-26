@@ -1,18 +1,29 @@
 ---
-- name: Add PPA Repository
-  sudo: yes
+- name: Add repository for Ubuntu
+  become: true
   apt_repository: repo={{ php_ppa }}
+  when: ansible_distribution|lower == "ubuntu"
+
+- name: Add repository for Debian
+  become: true
+  apt_repository: repo="deb http://packages.dotdeb.org {{ ansible_distribution_release }} all" state=present
+  when: ansible_distribution|lower == "debian"
+
+- name: Add apt key for Debian
+  become: true
+  apt_key: url=https://www.dotdeb.org/dotdeb.gpg state=present
+  when: ansible_distribution|lower == "debian"
 
 - name: Update apt
-  sudo: yes
+  become: yes
   apt: update_cache=yes
 
 - name: Install PHP
-  sudo: yes
+  become: yes
   apt: pkg=php7.0 state=latest
 
 - name: Install PHP Packages
-  sudo: yes
+  become: yes
   apt: pkg={{ item }} state=latest
   with_items: php_packages
   when: php_packages is defined
