@@ -18,10 +18,6 @@
   become: yes
   apt: update_cache=yes
 
-- name: Install PHP
-  become: yes
-  apt: pkg=php7.0 state=latest
-
 - name: Install PHP Packages
   become: yes
   apt: pkg={{ item }} state=latest
