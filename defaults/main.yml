@@ -16,6 +16,7 @@ php_post_max_size: "20M"
 php_memory_limit: "1024M"
 php_max_execution_time: 60
 php_url_fopen: Off
+disabled_functions: "exec,passthru,shell_exec,system,proc_open,popen"
 
 php_opcache_enable: 1
 php_opcache_revalidate_freq: 2592000
