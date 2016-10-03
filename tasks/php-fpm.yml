@@ -37,10 +37,10 @@
               line='session.use_strict_mode = 1'
   notify: restart php7-fpm
 
-- name: Disable url fopen
+- name: Set url fopen
   lineinfile: dest=/etc/php/7.0/fpm/php.ini
               regexp='allow_url_fopen(\s)?='
-              line='allow_url_fopen = Off'
+              line='allow_url_fopen = {{ php_url_fopen }}'
   notify: restart php7-fpm
 
 - name: Change soap.wsdl_cache_dir to new directory
