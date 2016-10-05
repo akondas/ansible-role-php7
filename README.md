@@ -6,7 +6,9 @@ Current PHP7 version: **7.0.5**
 
 ## Requirements
 
-None.
+1. Vagrant ([latest version](https://www.vagrantup.com/downloads.html))
+2. Ansible ([installation instructions](http://docs.ansible.com/intro_installation.html))
+3. Virtual Box ([download](https://www.virtualbox.org/wiki/Downloads))
 
 ## Role Variables
 
