@@ -33,7 +33,7 @@ Available variables are listed below, along with default values (see `defaults/m
     php_post_max_size: "20M"
     php_memory_limit: "1024M"
     php_max_execution_time: 60
-    
+
     php_opcache_enable: 1
     php_opcache_revalidate_freq: 2592000
     php_opcache_opcache_validate_timestamps: 1
@@ -41,6 +41,8 @@ Available variables are listed below, along with default values (see `defaults/m
     php_opcache_memory_consumption: 192
     php_opcache_interned_strings_buffer: 16
     php_opcache_fast_shutdown: 1
+
+    php_allow_url_fopen: 0
 
 ## Dependencies
 
