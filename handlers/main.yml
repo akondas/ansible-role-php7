@@ -1,4 +1,4 @@
 ---
-- name: restart php7-fpm
-  service: name=php7.0-fpm enabled=yes state=restarted
+- name: restart apache2
+  service: name=apache2 enabled=yes state=restarted
   become: yes
