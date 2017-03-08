@@ -31,12 +31,5 @@ script:
   - ansible-playbook -i test/inventory test/main.yml --syntax-check
   - ansible-playbook -i test/inventory test/main.yml
 
-after_success:
-  - "curl -o /tmp/travis-automerge https://raw.githubusercontent.com/cdown/travis-automerge/master/travis-automerge"
-  - "chmod a+x /tmp/travis-automerge"
-  - "BRANCHES_TO_MERGE_REGEX='staging' BRANCH_TO_MERGE_INTO=master GITHUB_REPO=benlipp/ansible-role-php7 /tmp/travis-automerge"
-
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
-
-secure: "G4g9PNrYGz7OxEQ0x4+vsCBUnhKk+uuvCWPJA1hhgT0qH0vQpFHSgebGyp4kO4PC14vyHqH/Cm9ILnAZni6sYdNtRZv6XdNHJL693S8ArLBVOLs1humF8hv+ZYbMcGRAyTQ8T2w/u/6cEJx077WLb48gK/F7u7udNPMOBrebqVrFTtXAkSnCqSqOQABEPwCt5wHgbxKHXSWbqke7IjAgpjPycnW26i1jtRkaiKdIUy7kWJXt6JZ3dMIWe43RGMmFxpdqBubRznzA0Cr2aZyYhXTM7KgqgLikV10/HWjC9zTvM+KNelpU34kBON71wOYQDujlDuppVhq2R4onCBflxFru10/ZWmURK5Gl+tghbVPgza6tj2i9eZKh/Zp1DccjyzhV87fLM01+Pc4WJ8Hjv8UtExNu755UgSQV/n491sbWMlhbSZUmsosgJFn8nuUJiDGKL1QZ6rZxamInCSOtkQKhQ210NoOcGVx2Y6u7OgOqjm1IdKYRaC0YLFuWz4YKJ14NfuXORRaz4bwN+xZ90wxRXMigJrfw8eu/31rPbZSlTwp4VS6efDPJMYf1wjmudns4vm9bVc+b8sJLtQdLegAJcd0Fv+K62sKh156PQwJQKwXpn/fJiNaTO/kiV35sI257OzfjwJp2fKdD5nqzZ2wypSkS0SZeXr0E84JAhQc="
