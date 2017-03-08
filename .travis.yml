@@ -31,10 +31,10 @@ script:
   - ansible-playbook -i test/inventory test/main.yml --syntax-check
   - ansible-playbook -i test/inventory test/main.yml
 
-  after_success:
-    - "curl -o /tmp/travis-automerge https://raw.githubusercontent.com/cdown/travis-automerge/master/travis-automerge"
-    - "chmod a+x /tmp/travis-automerge"
-    - "BRANCHES_TO_MERGE_REGEX='staging' BRANCH_TO_MERGE_INTO=master GITHUB_REPO=benlipp/ansible-role-php7 /tmp/travis-automerge"
+after_success:
+  - "curl -o /tmp/travis-automerge https://raw.githubusercontent.com/cdown/travis-automerge/master/travis-automerge"
+  - "chmod a+x /tmp/travis-automerge"
+  - "BRANCHES_TO_MERGE_REGEX='staging' BRANCH_TO_MERGE_INTO=master GITHUB_REPO=benlipp/ansible-role-php7 /tmp/travis-automerge"
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
