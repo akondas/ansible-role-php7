@@ -19,13 +19,6 @@
   notify: restart apache2
   become: yes
 
-- name: Set allow_url_fopen
-  lineinfile: dest=/etc/php/7.0/apache2/php.ini
-              regexp='allow_url_fopen(\s)?='
-              line='allow_url_fopen = {{ php_allow_url_fopen }}'
-  notify: restart apache2
-  become: yes
-
 - name: Set post_max_size
   lineinfile: dest=/etc/php/7.0/apache2/php.ini
               regexp='post_max_size(\s)?='
