@@ -1,4 +1,5 @@
 # Ansible Role: PHP7
+[![Build Status](https://travis-ci.org/benlipp/ansible-role-php7.svg?branch=master)](https://travis-ci.org/benlipp/ansible-role-php7)
 
 https://galaxy.ansible.com/benlipp/php7/
 
