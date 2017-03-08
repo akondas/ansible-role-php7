@@ -3,3 +3,4 @@
   lineinfile: dest=/etc/php/7.0/cli/php.ini
               regexp='date.timezone ='
               line='date.timezone = {{ php_timezone }}'
+  become: yes

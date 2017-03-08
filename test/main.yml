@@ -1,0 +1,18 @@
+---
+- name: Bring up docker containers
+  hosts: localhost
+  gather_facts: false
+  vars:
+    inventory:
+      - name: test_host_1
+        image: "ubuntu-upstart:14.04"
+  roles:
+    - { role: provision_docker, provision_docker_company: 'ansible', provision_docker_inventory: "{{ inventory }}" }
+
+- name: Run Tests
+  hosts: docker_containers
+  roles:
+    - { role: php7 }
+  tasks:
+    - name:
+      command: 'echo "hello world"'
