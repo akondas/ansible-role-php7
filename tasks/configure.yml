@@ -1,6 +1,6 @@
 ---
 - stat: path=/etc/php/7.0/apache2/php.ini
-  register: phpapache2
+  register: phpapache
 
 - stat: path=/etc/php/7.0/cli/php.ini
   register: phpcli
