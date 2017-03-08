@@ -1,14 +1,11 @@
 ---
 galaxy_info:
-  author: Arkadiusz Kondas
-  description: Installs and configure PHP 7 on Debian/Ubuntu servers
+  author: Ben Lippincott
+  description: Installs and configures PHP 7 on Ubuntu servers. Forked from itcraftsmanpl.php7
   license: MIT
   min_ansible_version: 1.9
   platforms:
     - name: Ubuntu
-      versions:
-      - all
-    - name: Debian
       versions:
       - all
   galaxy_tags:

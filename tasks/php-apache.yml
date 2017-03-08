@@ -1,0 +1,55 @@
+---
+- name: Ensure timezone is set in apache2 php.ini
+  lineinfile: dest=/etc/php/7.0/apache2/php.ini
+              regexp='date.timezone ='
+              line='date.timezone = {{ php_timezone }}'
+  become: yes
+
+- name: Set session.cookie_httponly to `true`
+  lineinfile: dest=/etc/php/7.0/apache2/php.ini
+              regexp='session.cookie_httponly(\s)?='
+              line='session.cookie_httponly=1'
+  notify: restart apache2
+  become: yes
+
+- name: Enable session strict mode
+  lineinfile: dest=/etc/php/7.0/apache2/php.ini
+              regexp='session.use_strict_mode(\s)?='
+              line='session.use_strict_mode = 1'
+  notify: restart apache2
+  become: yes
+
+- name: Set post_max_size
+  lineinfile: dest=/etc/php/7.0/apache2/php.ini
+              regexp='post_max_size(\s)?='
+              line='post_max_size = {{ php_post_max_size }}'
+  notify: restart apache2
+  become: yes
+
+- name: Set upload_max_filesize
+  lineinfile: dest=/etc/php/7.0/apache2/php.ini
+              regexp='upload_max_filesize(\s)?='
+              line='upload_max_filesize = {{ php_upload_max_filesize }}'
+              create=yes
+  notify: restart apache2
+  become: yes
+
+- name: Set memory_limit
+  lineinfile: dest=/etc/php/7.0/apache2/php.ini
+              regexp='memory_limit(\s)?='
+              line='memory_limit = {{ php_memory_limit }}'
+  notify: restart apache2
+  become: yes
+
+- name: Set max_execution_time
+  lineinfile: dest=/etc/php/7.0/apache2/php.ini
+              regexp='max_execution_time(\s)?='
+              line='max_execution_time = {{ php_max_execution_time }}'
+  notify: restart apache2
+  become: yes
+
+- name: Set short_open_tag
+  lineinfile: dest=/etc/php/7.0/apache2/php.ini
+              regexp='short_open_tag(\s)?='
+              line='max_execution_time = {{ php_short_open_tag }}'
+  become: yes
