@@ -2,17 +2,6 @@
 - name: Add repository for Ubuntu
   become: true
   apt_repository: repo={{ php_ppa }}
-  when: ansible_distribution|lower == "ubuntu"
-
-- name: Add repository for Debian
-  become: true
-  apt_repository: repo="deb http://packages.dotdeb.org {{ ansible_distribution_release }} all" state=present
-  when: ansible_distribution|lower == "debian"
-
-- name: Add apt key for Debian
-  become: true
-  apt_key: url=https://www.dotdeb.org/dotdeb.gpg state=present
-  when: ansible_distribution|lower == "debian"
 
 - name: Update apt
   become: yes
@@ -24,6 +13,6 @@
   with_items: "{{ php_packages }}"
   when: php_packages is defined
   notify:
-    - restart php7-fpm
+    - restart apache2
 
 - include: configure.yml
