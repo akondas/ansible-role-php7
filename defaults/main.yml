@@ -12,6 +12,7 @@ php_packages:
   - php7.0-gd
   - php7.0-mbstring
   - php7.0-mcrypt
+  - php7.0-zip
 php_timezone: UTC
 php_upload_max_filesize: "20M"
 php_post_max_size: "20M"
