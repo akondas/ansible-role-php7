@@ -4,7 +4,7 @@ https://galaxy.ansible.com/itcraftsmanpl/php7/
 
 An Ansible role that installs and configure PHP 7 on Debian/Ubuntu servers.
 
-Current PHP7 version: **7.0.5**
+Current PHP7 version: **7.1.2**
 
 ## Requirements
 
@@ -18,16 +18,16 @@ Available variables are listed below, along with default values (see `defaults/m
 
     php_ppa: "ppa:ondrej/php"
     php_packages:
-      - php7.0-common
-      - php7.0-cli
-      - php7.0-intl
-      - php7.0-curl
-      - php7.0-cgi
-      - php7.0-fpm
-      - php7.0-mysql
-      - php7.0-gd
-      - php7.0-mbstring
-      - php7.0-mcrypt
+      - php7.1-common
+      - php7.1-cli
+      - php7.1-intl
+      - php7.1-curl
+      - php7.1-cgi
+      - php7.1-fpm
+      - php7.1-mysql
+      - php7.1-gd
+      - php7.1-mbstring
+      - php7.1-mcrypt
     php_timezone: Europe/Warsaw
     php_upload_max_filesize: "20M"
     php_post_max_size: "20M"
