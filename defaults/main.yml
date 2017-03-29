@@ -1,16 +1,16 @@
 ---
 php_ppa: "ppa:ondrej/php"
 php_packages:
-  - php7.0-common
-  - php7.0-cli
-  - php7.0-intl
-  - php7.0-curl
-  - php7.0-cgi
-  - php7.0-fpm
-  - php7.0-mysql
-  - php7.0-gd
-  - php7.0-mcrypt
-  - php7.0-mbstring
+  - php7.1-common
+  - php7.1-cli
+  - php7.1-intl
+  - php7.1-curl
+  - php7.1-cgi
+  - php7.1-fpm
+  - php7.1-mysql
+  - php7.1-gd
+  - php7.1-mcrypt
+  - php7.1-mbstring
 php_timezone: Europe/Warsaw
 php_upload_max_filesize: "20M"
 php_post_max_size: "20M"
