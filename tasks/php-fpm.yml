@@ -110,7 +110,7 @@
 - name: opcache - changing max accelerated files
   lineinfile: dest=/etc/php/7.1/fpm/php.ini
               regexp='opcache.max_accelerated_files='
-              line='opcache.validate_timestamps={{ php_opcache_max_accelerated_files }}'
+              line='opcache.max_accelerated_files={{ php_opcache_max_accelerated_files }}'
               insertafter="^[opcache]"
   notify: restart php7-fpm
 
