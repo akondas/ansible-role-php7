@@ -1,6 +1,6 @@
 # Ansible Role: PHP7
 
-https://galaxy.ansible.com/itcraftsmanpl/php7/
+https://galaxy.ansible.com/akondas/php7
 
 An Ansible role that installs and configure PHP 7 on Debian/Ubuntu servers.
 
@@ -51,7 +51,7 @@ None.
 
     - hosts: webservers
       roles:
-        - { role: itcraftsmanpl.php7 }
+        - { role: akondas.php7 }
 
 ## License
 
