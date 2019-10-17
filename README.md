@@ -1,10 +1,10 @@
 # Ansible Role: PHP7
 
-https://galaxy.ansible.com/itcraftsmanpl/php7/
+https://galaxy.ansible.com/akondas/php7
 
 An Ansible role that installs and configure PHP 7 on Debian/Ubuntu servers.
 
-Current PHP7 version: **7.1.2**
+Current PHP7 version: **7.2.23**
 
 ## Requirements
 
@@ -18,16 +18,15 @@ Available variables are listed below, along with default values (see `defaults/m
 
     php_ppa: "ppa:ondrej/php"
     php_packages:
-      - php7.1-common
-      - php7.1-cli
-      - php7.1-intl
-      - php7.1-curl
-      - php7.1-cgi
-      - php7.1-fpm
-      - php7.1-mysql
-      - php7.1-gd
-      - php7.1-mbstring
-      - php7.1-mcrypt
+      - php7.2-common
+      - php7.2-cli
+      - php7.2-intl
+      - php7.2-curl
+      - php7.2-cgi
+      - php7.2-fpm
+      - php7.2-mysql
+      - php7.2-gd
+      - php7.2-mbstring
     php_timezone: Europe/Warsaw
     php_upload_max_filesize: "20M"
     php_post_max_size: "20M"
@@ -52,7 +51,7 @@ None.
 
     - hosts: webservers
       roles:
-        - { role: itcraftsmanpl.php7 }
+        - { role: akondas.php7 }
 
 ## License
 
