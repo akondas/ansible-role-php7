@@ -43,19 +43,7 @@
               line='allow_url_fopen = {{ php_allow_url_fopen }}'
   notify: restart php7-fpm
 
-- name: Change soap.wsdl_cache_dir to new directory
-  lineinfile: dest=/etc/php/7.2/fpm/php.ini
-              regexp='soap.wsdl_cache_dir(\s)?='
-              line='soap.wsdl_cache_dir=/php/cache/wsdl'
-  notify: restart php7-fpm
-
-- name: Change upload_tmp_dir path
-  lineinfile: dest=/etc/php/7.2/fpm/php.ini
-              regexp='upload_tmp_dir(\s)?='
-              line='upload_tmp_dir=/php/cache/upload_tmp'
-  notify: restart php7-fpm
-
-- name: Exclude potentially harmfull php functions
+- name: Exclude potentially harmful php functions
   lineinfile: dest=/etc/php/7.2/fpm/php.ini
               regexp='disable_functions(\s)?='
               line='disable_functions=exec,passthru,shell_exec,system,proc_open,popen'
